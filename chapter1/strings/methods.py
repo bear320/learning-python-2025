@@ -54,3 +54,17 @@ print("I have a string {}".format(["hello", "world"]))
 # fstring
 print(f"My name is {name} and I am {age} years old.")
 # My name is Alice and I am 25 years old.
+
+# count
+print(myString.count("l"))  # 2
+print(sentence.count("good"))  # 1
+print("Good day is a good day.".lower().count("good"))  # 2
+
+# find
+print(myString.find("l"))  # 2
+print(myString.find("z"))  # -1
+
+# startswith and endswith
+print(myString.startswith("H"))  # True
+print(myString.startswith("He"))  # True
+print(myString.endswith("z"))  # False
