@@ -1,25 +1,26 @@
-# tuple packing
-x = 10, 15
-print(x)  # (10, 15)
-print(type(x))  # <class 'tuple'>
+my_tuple = (10, "hello", True, 3.14)
 
-# tuple unpacking
-person = ("Alice", 25, "New York")
-name, age, city = person
-print(name)  # Alice
-print(age)  # 25
-print(city)  # New York
+# indexing
+print(my_tuple[0])  # Output: 10
+print(my_tuple[1:2])  # Output: ('hello',)
+print(my_tuple[1:])  # Output: ('hello', True, 3.14)
+print(my_tuple[:2])  # Output: (10, 'hello')
+print(my_tuple[-1])  # Output: 3.14
+print(my_tuple[-2:])  # Output: (True, 3.14)
+print(my_tuple[-2:-1])  # Output: (True,)
+print(my_tuple[-2:1])  # Output: ()
 
-# tuple unpacking with asterisk
-x = 10, 15, 20, 25
-a, b, *c = x
-print(a)  # 10
-print(b)  # 15
-print(c)  # [20, 25]
+# len()
+print(len(my_tuple))  # Output: 4
 
-# tuple upacking and packing
-m = 15
-n = 20
-m, n = n, m
-print(m)  # 20
-print(n)  # 15
+# count()
+print(my_tuple.count(10))  # Output: 1
+print(my_tuple.count("10"))  # Output: 0
+
+# index()
+print(my_tuple.index(10))  # Output: 0
+print(my_tuple.index("hello"))  # Output: 1
+
+# error
+my_tuple.append(5)  # AttributeError: 'tuple' object has no attribute 'append'
+my_tuple[0] = 20  # TypeError: 'tuple' object does not support item assignment
