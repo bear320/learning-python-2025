@@ -12,3 +12,13 @@ print(squared_x)  # [1, 4, 9, 16, 25]
 squared_x = [i**2 for i in x if i > 2]
 
 print(squared_x)  # [9, 16, 25]
+
+# dictionary comprehension
+squared_x = {i: i**2 for i in x if i > 2}
+
+print(squared_x)  # {3: 9, 4: 16, 5: 25}
+
+# set comprehension
+squared_x = {i**2 for i in x if i > 2}
+
+print(squared_x)  # {9, 16, 25}
