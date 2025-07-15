@@ -24,3 +24,16 @@ print(sum(12, 8))  # 20
 
 print(sum(n2=5))  # 5
 print(sum(n2=10, n1=5))  # 15
+
+
+# arbitrary arguments
+def sum_all(*args):
+    total = 0
+    for n in range(len(args)):
+        total += args[n]
+        print(f"Adding {args[n]} to total, current total: {total}")
+    return total
+
+
+print(sum_all(1, 2, 3))  # 6
+print(sum_all(2, -3, 4, 5))  # 8
