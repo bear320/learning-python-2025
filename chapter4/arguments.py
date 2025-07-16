@@ -37,3 +37,23 @@ def sum_all(*args):
 
 print(sum_all(1, 2, 3))  # 6
 print(sum_all(2, -3, 4, 5))  # 8
+
+
+def introduce(**kwargs):
+    print(
+        "{} is now {} years old and lives in {}.".format(
+            kwargs["name"], kwargs["age"], kwargs["city"]
+        )
+    )
+    # for key, value in kwargs.items():
+    #     print(f"{key}: {value}")
+
+
+introduce(name="Alice", age=30, city="New York")
+
+
+def my_func(*args, **kwargs):
+    print("{} would like to eat {} {}.".format(kwargs["name"], args[0], kwargs["food"]))
+
+
+my_func(5, 10, 15, name="John", food="eggs")
