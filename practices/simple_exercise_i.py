@@ -24,6 +24,34 @@ def position(string):
     return -1
 
 
-print(position("abcd"))
-print(position("AbcD"))
-print(position("abCD"))
+# print(position("abcd"))  # returns -1
+# print(position("AbcD"))  # returns ('A', 0)
+# print(position("abCD"))  # returns ('C', 2)
+
+
+# 4. Write a function called "findSmallCount" that takes one list of integers and one integer as input, and returns an integer indicating how many elements in the list is smaller than the input integer.
+def findSmallCount(list, int):
+    count = 0
+    for i in list:
+        if i < int:
+            count += 1
+    return count
+
+
+# print(findSmallCount([1, 2, 3], 2))  # returns 1
+# print(findSmallCount([1, 2, 3, 4, 5], 0))  # returns 0
+
+
+# 5. Write a function called "findSmallerTotal" that takes one list of integers and one integer as input, and returns the sum of all elements in the list that are smaller than the input integer.
+def findSmallerTotal(list, int):
+    total = 0
+    for i in list:
+        if i < int:
+            total += i
+    return total
+
+
+print(findSmallerTotal([1, 2, 3], 3))  # returns 3
+print(findSmallerTotal([1, 2, 3], 1))  # returns 0
+print(findSmallerTotal([3, 2, 5, 8, 7], 999))  # returns 25
+print(findSmallerTotal([3, 2, 5, 8, 7], 0))  # returns 0
