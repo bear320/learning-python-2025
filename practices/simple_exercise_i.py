@@ -59,11 +59,11 @@ def findSmallerTotal(list, int):
 
 # 6. Write a function called "findAllSmall" that takes one list of integers and another integer as input, and returns an list of integers that contains all elements that are smaller than the input integer.
 def findAllSmall(list, int):
-    smallerInts = []
+    result = []
     for i in list:
         if i < int:
-            smallerInts.append(i)
-    return smallerInts
+            result.append(i)
+    return result
 
 
 # print(findAllSmall([1, 2, 3], 10))  # returns [1, 2, 3]
@@ -73,10 +73,10 @@ def findAllSmall(list, int):
 
 # 7. Write a function called "summ" that takes one list of numbers, and return the sum of all elements in the input list.
 def summ(list):
-    sum = 0
+    result = 0
     for i in list:
-        sum += i
-    return sum
+        result += i
+    return result
 
 
 print(summ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))  # returns 55
