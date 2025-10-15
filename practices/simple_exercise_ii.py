@@ -82,4 +82,37 @@ def table9to9():
             print(f"{i} x {j} = {i*j}")
 
 
-table9to9()
+# table9to9()
+
+
+# 5. Write a function called "swap" that takes a string as input, and returns a new string with lowercase changed to uppercase, uppercase changed to lowercase.
+def swap(str):
+    result = ""
+    for char in str:
+        if char.islower():
+            result += char.upper()
+        elif char.isupper():
+            result += char.lower()
+        else:
+            result += char
+    return result
+
+
+# print(swap("Aloha"))  # returns "aLOHA"
+# print(swap("Love you."))  # returns "lOVE YOU."
+
+
+# 6. Write a function called "findMin" which takes an list as input, and returns the minimum element in the input list.
+def findMin(arr):
+    if len(arr) > 0:
+        min_value = arr[0]
+        for num in arr:
+            if num < min_value:
+                min_value = num
+        return min_value
+    return None
+
+
+print(findMin([1, 2, 5, 6, 99, 4, 5]))  # returns 1
+print(findMin([]))  # returns None
+print(findMin([1, 6, 0, 33, 44, 88, -10]))  # returns -10
