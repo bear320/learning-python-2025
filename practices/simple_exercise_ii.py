@@ -110,9 +110,9 @@ def findMin(arr):
             if num < min_value:
                 min_value = num
         return min_value
-    return None
+    return "undefined"
 
 
 print(findMin([1, 2, 5, 6, 99, 4, 5]))  # returns 1
-print(findMin([]))  # returns None
+print(findMin([]))  # returns 'undefined'
 print(findMin([1, 6, 0, 33, 44, 88, -10]))  # returns -10
