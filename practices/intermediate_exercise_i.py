@@ -1,4 +1,4 @@
-# 1.
+# 1. Write a function called "mySort" that takes an list of integers as input, and returns the sorted version of the input list. You are not allowed to use the built-in sorted() function.
 def mySort(arr):
     n = len(arr)
     for i in range(n):
@@ -10,4 +10,21 @@ def mySort(arr):
     return arr
 
 
-print(mySort([17, 0, -3, 2, 1, 0.5]))  # returns [-3, 0, 0.5, 1, 2, 17]
+# print(mySort([17, 0, -3, 2, 1, 0.5]))  # returns [-3, 0, 0.5, 1, 2, 17]
+
+
+# 2. Write a function called "isPrime" that takes an integer as input, and returns a boolean value that indicates if the input number is prime.
+def isPrime(n):
+    if n <= 1:
+        return False
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True
+
+
+print(isPrime(1))  # returns False
+print(isPrime(5))  # returns True
+print(isPrime(91))  # returns False
+print(isPrime(1000000))  # returns False
