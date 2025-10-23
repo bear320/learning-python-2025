@@ -24,7 +24,24 @@ def isPrime(n):
         return True
 
 
-print(isPrime(1))  # returns False
-print(isPrime(5))  # returns True
-print(isPrime(91))  # returns False
-print(isPrime(1000000))  # returns False
+# print(isPrime(1))  # returns False
+# print(isPrime(5))  # returns True
+# print(isPrime(91))  # returns False
+# print(isPrime(1000000))  # returns False
+
+
+# 3. Write a function called "palindrome" that checks if the input string is a palindrome.
+def palindrome(str):
+    left = 0
+    right = len(str) - 1
+    while left < right:
+        if str[left] != str[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+
+print(palindrome("bearaeb"))  # True
+print(palindrome("Whatever revetahW"))  # True
+print(palindrome("Aloha, how are you today?"))  # False
