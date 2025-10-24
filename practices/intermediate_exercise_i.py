@@ -45,3 +45,29 @@ def palindrome(str):
 print(palindrome("bearaeb"))  # True
 print(palindrome("Whatever revetahW"))  # True
 print(palindrome("Aloha, how are you today?"))  # False
+
+
+# 4. Write a function called "pyramid" that takes an integer as input, and prints a pyramid in the following pattern:
+
+# pyramid(1)
+# *
+
+# pyramid(2)
+#  *
+# ***
+
+# pyramid(4)
+#    *
+#   ***
+#  *****
+# *******
+
+
+def pyramid(n):
+    for i in range(1, n + 1):
+        print(f"{' ' * (n - i)}{'*' * (i * 2 - 1)}")
+
+
+pyramid(1)
+pyramid(2)
+pyramid(4)
