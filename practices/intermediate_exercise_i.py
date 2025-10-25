@@ -68,6 +68,15 @@ def pyramid(n):
         print(f"{' ' * (n - i)}{'*' * (i * 2 - 1)}")
 
 
-pyramid(1)
-pyramid(2)
-pyramid(4)
+# pyramid(1)
+# pyramid(2)
+# pyramid(4)
+
+
+# 5. Write a function called "inversePyramid" that draws pyramid upside down.
+def inversePyramid(n):
+    for i in range(n, 0, -1):
+        print(f"{' ' * (n - i)}{'*' * (i * 2 - 1)}")
+
+
+inversePyramid(4)
