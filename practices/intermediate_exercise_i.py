@@ -42,9 +42,9 @@ def palindrome(str):
     return True
 
 
-print(palindrome("bearaeb"))  # True
-print(palindrome("Whatever revetahW"))  # True
-print(palindrome("Aloha, how are you today?"))  # False
+# print(palindrome("bearaeb"))  # True
+# print(palindrome("Whatever revetahW"))  # True
+# print(palindrome("Aloha, how are you today?"))  # False
 
 
 # 4. Write a function called "pyramid" that takes an integer as input, and prints a pyramid in the following pattern:
@@ -79,4 +79,17 @@ def inversePyramid(n):
         print(f"{' ' * (n - i)}{'*' * (i * 2 - 1)}")
 
 
-inversePyramid(4)
+# inversePyramid(4)
+
+
+# 6. Given a list of ints, return True if the list contains a 3 next to a 3.
+def has_33(arr):
+    for i in range(len(arr) - 1):
+        if arr[i] == 3 and arr[i + 1] == 3:
+            return True
+    return False
+
+
+print(has_33([1, 5, 7, 3, 3]))  # True
+print(has_33([]))  # False
+print(has_33([4, 3, 2, 1, 0]))  # False
