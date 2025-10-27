@@ -90,6 +90,21 @@ def has_33(arr):
     return False
 
 
-print(has_33([1, 5, 7, 3, 3]))  # True
-print(has_33([]))  # False
-print(has_33([4, 3, 2, 1, 0]))  # False
+# print(has_33([1, 5, 7, 3, 3]))  # True
+# print(has_33([]))  # False
+# print(has_33([4, 3, 2, 1, 0]))  # False
+
+
+# 7. Write a function that check if a list contains a subsequence of 007
+def spyGame(lst):
+    state = 0  # 0=found first 0, 1=found second 0, 2=found two 0s
+    for i in lst:
+        if i == 0 and state < 2:
+            state += 1
+        elif i == 7 and state == 2:
+            return True
+    return False
+
+
+print(spyGame([1, 2, 4, 0, 3, 0, 7]))  # True
+print(spyGame([1, 2, 5, 0, 3, 1, 7]))  # False
