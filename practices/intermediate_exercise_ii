@@ -1,0 +1,8 @@
+# 1. Write a function called "factorPrime" that takes an integer as input, and returns the prime factorization of the input.
+def factorPrime(n):
+    factors = []
+    for i in range(2, n + 1):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
+    return factors
