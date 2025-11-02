@@ -6,3 +6,39 @@ def factorPrime(n):
             factors.append(i)
             n //= i
     return factors
+
+
+# print(factorPrime(120))  # [2, 2, 2, 3, 5]
+
+
+# 2. Write a function called "intersection" that takes 2 lists, and returns an list of elements that are in the intersection of 2 list.
+# def intersection(lst1, lst2):
+#     result = []
+#     for i in lst1:
+#         for j in lst2:
+#             if i == j:
+#                 result.append(i)
+#     return result
+
+
+def intersection(list1, list2):
+    return list(set(list1) & set(list2))
+
+
+# print(intersection([1, 3, 4, 6, 10], [5, 11, 4, 3, 100, 144, 0]))  # [3, 4]
+
+
+# 3. Write a function called "flatten" that flattens an list.
+def flatten(lst):
+    result = []
+    for i in lst:
+        if isinstance(i, list):
+            result.extend(flatten(i))
+        else:
+            result.append(i)
+    return result
+
+
+print(
+    flatten([1, [[], 2, [0, [1]], [3]], [1, 3, [3], [4, [1]], [2]]])
+)  # [1, 2, 0, 1, 3, 1, 3, 3, 4, 1, 2]
